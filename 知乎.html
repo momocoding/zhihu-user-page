@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>知乎</title>
+    <link rel="stylesheet" href="zhihu.css">
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+</head>
+<body>
+<div id="header-background"></div>
+<div id="all-container">
+    <div id="header" class="clearfix">
+        <div class="header-content">
+            <h1 id="xin-title">知乎</h1>
+            <input type="text" id="input-search" class="zhihu-hide" placeholder="搜索你感兴趣的装逼内容...">
+            <button id="button-search" class="button">搜</button>
+            <a href="#">首页</a>
+            <a href="#">发现</a>
+            <a href="#">话题</a>
+            <a href="#">消息</a>
+            <button id="button-question" class="button">提问</button>
+            <select name="select-username" id="id-select-username">
+                <option value="L丶xin">菜鸟</option>
+                <option value="我的主页">我的主页</option>
+                <option value="私信">私信</option>
+                <option value="设置">设置</option>
+            </select>
+        </div>
+    </div>
+    <script>
+        $('#button-search').on('click', function(){
+            var div = $('#input-search')
+            div.toggleClass('zhihu-hide')
+            var opacity = 0
+            if(div.hasClass('zhihu-hide')) {
+                opacity = 0
+            }else {
+                opacity = 1
+            }
+            div.animate({
+                "opacity": opacity,
+            }, "slow");
+        })
+    </script>
+    <div id="clear-main"></div>
+    <div id="main">
+        <div id="xin-content">
+            <div id="profile">
+                <div id="img-avatar">
+                    <img src="avatar.jpg" alt="avatar">
+                    <div id="ranking">
+                        <span>获得</span>
+                        <span> <img class="img-icon" src="zan.png" alt="赞"> 0赞同</span>
+                        <span> <img class="img-icon" src="thanks.png" alt="感谢"> 0感谢</span>
+                    </div>
+                </div>
+                <div id="introduce">
+                    <h3><b>菜鸟</b></h3><br>
+                    <h3 class="h-font-color">想做个有趣的码代码的</h3>
+                    <p><img class="img-icon-profile" src="居住地.png" alt="居住地">填写居住地</p>
+                    <p><img class="img-icon-profile" src="工作信息.png" alt="粪坑">填写粪坑</p>
+                    <p><img class="img-icon-profile" src="等级.png" alt="等级">填写掏粪等级</p>
+                    <p><img class="img-icon-profile" src="详细信息.png" alt="详细信息">查看详细信息</p>
+                    <hr>
+                    <h5 class="h-font-color">没有标签这就是我</h5>
+                    <hr>
+                    <button id="button-update-profile">完善我的资料</button>
+                </div>
+            </div>
+            <div id="div-profile-nav">
+                <img id="img-home" src="home.png" alt="home">
+                <a href="#" class="class-profile-nav">提问 0</a>
+                <a href="#" class="class-profile-nav">回答 5</a>
+                <a href="#" class="class-profile-nav">文章 0</a>
+                <a href="#" class="class-profile-nav">收藏 6</a>
+                <a href="#" class="class-profile-nav">公共编辑 0</a>
+            </div>
+            <div id="anwser">
+                <div class="sub-title">回答</div>
+                <div class="flex">
+                    <div class="flex1">
+                        <button class="button-zan"><p>0</p>赞同</button>
+                    </div>
+                    <div class="flex9">
+                        <p>
+                            <a class="question-title ">如何评价韩寒 2016 年 4 月 13 日个人发布会？</a>
+                        </p>
+                        <p class="anwser-content">韩寒</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="flex">
+                    <div class="flex1">
+                        <button class="button-zan"><p>0</p>赞同</button>
+                    </div>
+                    <div class="flex9">
+                        <p>
+                            <a class="question-title ">大个女生能卖萌么？</a>
+                        </p>
+                        <p class="anwser-content">可以，好像谁不能是公主似得</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="flex">
+                    <div class="flex1">
+                        <button class="button-zan"><p>0</p>赞同</button>
+                    </div>
+                    <div class="flex9">
+                        <p>
+                            <a class="question-title ">如果有一间时间小屋，里面一年等于外面一秒，怎样使用它最爽？</a>
+                        </p>
+                        <p class="anwser-content">就在里面呆着了</p>
+                    </div>
+                </div>
+            </div>
+            <div id="new">
+                <div class="sub-title">最新动态</div>
+                <p>赞同了回答 <span>两天前</span></p>
+                <p class="flex9">
+                    <a class="question-title ">大个女生能卖萌么？</a>
+                </p>
+                <div class="flex">
+                    <div class="flex1">
+                        <button class="button-zan"><p>0</p></button>
+                    </div>
+                    <div class="flex9">
+                        <p><h3>个私信 <span class="zuoyouming">为了能在知乎上随意回答问题，要多看书。</span></h3></p>
+                        <p class="anwser-content">可以，好像谁不能是公主似得</p>
+                    </div>
+                </div>
+                <hr>
+                <p>赞同了回答 <span>两天前</span></p>
+                <p class="flex9">
+                    <a class="question-title ">大个女生能卖萌么？</a>
+                </p>
+                <div class="flex">
+                    <div class="flex1">
+                        <button class="button-zan"><p>0</p></button>
+                    </div>
+                    <div class="flex9">
+                        <p><h3>个私信 <span class="zuoyouming">为了能在知乎上随意回答问题，要多看书。</span></h3></p>
+                        <p class="anwser-content">
+                            气呗。比如周杰伦，他这几年就喜欢抄袭。最近的新专辑，总有几首歌某部分听起来像别的歌。就气哦。你可是周杰伦诶，还抄袭，过分诶。然后就骂啊。边听边骂，怎么骂呢？就自己一个人在那边很生气的骂：周杰伦你特么的越来越懒了吧？这部份明明和你之前的什么什么歌调子差不多好么？你过分诶，能不能不要抄自己的歌啊。
+
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <p>赞同了回答 <span>两天前</span></p>
+                <p class="flex9">
+                    <a class="question-title ">大个女生能卖萌么？</a>
+                </p>
+                <div class="flex">
+                    <div class="flex1">
+                        <button class="button-zan"><p>0</p></button>
+                    </div>
+                    <div class="flex9">
+                        <p><h3>个私信 <span class="zuoyouming">为了能在知乎上随意回答问题，要多看书。</span></h3></p>
+                        <p class="anwser-content">可以，好像谁不能是公主似得</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <div id="sidebar">
+            <div class="flex">
+                <div class="flex1">
+                    <p>关注了</p>
+                    <p>52人</p>
+                </div>
+                <flex9>
+                    <p>关注者</p>
+                    <p>0人</p>
+                </flex9>
+            </div>
+            <hr>
+            <div class="sub-title">关注了20个专栏</div>
+            <img src="avatar.jpg" alt="follow">
+            <img src="avatar.jpg" alt="follow">
+            <img src="avatar.jpg" alt="follow">
+            <img src="avatar.jpg" alt="follow">
+            <img src="avatar.jpg" alt="follow">
+            <img src="avatar.jpg" alt="follow">
+            <hr>
+            <div class="sub-title">关注了15个话题</div>
+            <img src="avatar.jpg" alt="follow">
+            <img src="avatar.jpg" alt="follow">
+            <img src="avatar.jpg" alt="follow">
+            <img src="avatar.jpg" alt="follow">
+            <img src="avatar.jpg" alt="follow">
+            <img src="avatar.jpg" alt="follow">
+            <hr>
+            <p>主页被88个人浏览</p>
+            <hr>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
